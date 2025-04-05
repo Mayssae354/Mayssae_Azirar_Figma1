@@ -147,18 +147,17 @@ body{
     margin: 0;
 }
 .vect{
-    margin-top: -32rem;
-    rotate: 365.6deg;
-    height: 647px;
-    width: 610px;
-    margin-left: 2rem;
-    border: 3px;
+    margin-top: -30rem;
+    rotate: 348.6deg;
+    height: 540px;
+    width: 510px;
+    margin-left: 1rem;
 }
 .mob{
-    width: 486px;
-    height: 510px;
+    width: 417px;
+    height: 459px;
     margin-top: 9rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 .textf{
     display: flex;
@@ -219,6 +218,7 @@ body{
 .pcpsection{
     font-family: "DM Sans", sans-serif;
     color: #90A3B4;
+    width: 450px;
 }
 .pclist
 {
@@ -249,7 +249,7 @@ body{
     font-weight: bold;
 }
 .pcsectiondroit{
-    width: 700px;
+    width: 650px;
     height: 410px;
     margin-top: 35px;
 }
@@ -542,46 +542,27 @@ letter-spacing: 0.3;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .endsection{
     background-color: rgba(8, 19, 21, 1);
-   height: 625px;;
+   height: 625px;
 }
-
-
 .elyansection{
     width: 828px;
     height: 350px;
     padding: 7rem 3rem 0rem 8rem;
-    display: flex
-;
+    display: flex;
     gap: 3rem;
     margin-left: 2rem;
 }
 .ehya{
     width: 263px;
 }
-
 .elyansection p{
     color: rgba(211, 214, 216, 1);
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     size: 16px;
     line-height: 28px;
-
 }
 .endsection h1{
     color: rgba(255, 255, 255, 1);
@@ -595,7 +576,6 @@ letter-spacing: 0.3;
     display: flex;
     gap: 5px;
 }
-
 .heart
 {
     width: 289px;
@@ -604,7 +584,6 @@ letter-spacing: 0.3;
 }
 .heart img{
     margin: 0rem 0rem 1rem 7rem;
-
 }
 
 
@@ -613,16 +592,103 @@ letter-spacing: 0.3;
 
 
 
+@media-screen and ( min-width:882px) {
+
+.topview{
+    Font-size : 20px;
+    width: 100%;
+    HEIGHT: 720px;
+}
+
+.appsection
+{
+    Font-size : 20px;
+    height: 820px;
+    width: 700px;
+}
+
+.pcsection{
+    display: flex;
+    padding: 3rem;
+    Font-size : 20px;
+}
+.tracksection{
+    width: 100%;
+    height: 600px;
+    Font-size : 20px;
+}
+
+.commentsection{
+    width: 100%;
+    height: 480px;  
+    Font-size : 20px;
+}
+
+.trialsection{
+    height: 480px;
+    Font-size : 20px;
+}
+
+.endsection{
+   
+   height: 625px;
+   Font-size : 20px;
+}
+
+
+}
+
+
+
 
 
 
 @media screen and ( max-width:390px) {
+    .appsection
+    {
+        height: 1095px;
+        width: 589px;
+    }
     
+    .apptop{
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        width: 536px;
+        height: 38px;
+        padding: 2px 0rem 0rem 1rem;
+    }
+    .apptop img{
+        padding: 0;
+        margin: 0;
+        width: 20%;
+        height: 100%;
+    }
+    
+
+    .donnerdown{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .appright {
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    .appright h1{
+        text-align: center;
+        margin-left: 5rem;
+    }
+    .graphs{
+        text-align: center;
+    }
+    .textf{
+        margin-left: 2rem;
+    }
 
     .pcsection{
         width: 96%;
-        display: flex
-;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -632,10 +698,10 @@ letter-spacing: 0.3;
         width: 100%;
     }
     .pcsectiondroit{
-        width: 100%;
-        margin-left: -2rem;
-
-
+        width: 529px;
+        height: 380px;
+        margin-top: 5px;
+        margin-left: 10px;
     }
     .pctextgauche{
         display: flex;
@@ -645,8 +711,7 @@ letter-spacing: 0.3;
 
     }
     .pcsectiondroit img{
-        margin-top: 2rem;
-        width: 80%;
+        width: 100%;
     }
 
     .pcpsection{
@@ -658,28 +723,55 @@ letter-spacing: 0.3;
         width: 100%;
         margin-left: -2rem;
     }
-.schedule_title{
+    .schedule_title{
     text-align: center;
-}
+    }
 
-.pclist
-{
-    display: flex;
-    
-}
-
-
-
-.pcsectiondroit{
-    width: 700px;
-    height: 410px;
-    margin-top: 35px;
-}
-.pcsectiondroit img{
-    width: 100%;
+    .pclist
+    {
+    display: flex;  
+    }
    
-}
+    .pcsectiondroit img{
+    width: 100%;
+    }
 
 
 
+
+
+
+    .tracksection
+    {
+        height: 607px;
+        width: 589px;
+    }
+    .case{
+        margin-left: 5px;
+        margin-top: 23px;
+        width: 530px;
+        height: 281px;
+        gap: 17px;
+    }
+    .cls{
+        width: 25%;
+    }
+    .trackimage{
+        width: 20%;
+        height: 42px;
+        margin-top: 16px;
+        margin-left: 16px;
+    }
+    .h1track{
+        width: 57%;
+        font-size: inherit;
+        overflow-x: clip;
+        line-height: 20px;
+    }
+    .ptrack{
+        overflow-x: clip;
+        width: 57%;
+        margin-top: 36px;
+        line-height: 20px;
+    }
 }
