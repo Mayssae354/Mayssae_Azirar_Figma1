@@ -647,7 +647,7 @@ letter-spacing: 0.3;
 @media screen and ( max-width:390px) {
     .topview{
         height: 1141px;
-        width: 701px;
+        width: 730px;
     }
     .header{
         padding-left: 1rem;
@@ -667,12 +667,12 @@ letter-spacing: 0.3;
     }
     .topvi{
         margin-left: -34.5px;
-        margin-top: -40rem;
+        margin-top: -45rem;
     }
     .appsection
     {
         height: 1095px;
-        width: 701px;
+        width: 730px;
         Font-size : 10px
     }
     
@@ -846,7 +846,7 @@ letter-spacing: 0.3;
     }
     .trialsection{
         height: 520px;
-        width: 701px;
+        width: 730px;
     }
     .rectangle{
         width: 92%;
@@ -923,7 +923,7 @@ letter-spacing: 0.3;
     }
     .endsection{
         background-color: rgba(8, 19, 21, 1);
-       width: 701px;
+       width: 730px;
     }
     .endsection h1{
         font-size: unset;
