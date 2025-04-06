@@ -899,7 +899,7 @@ letter-spacing: 0.3;
 
 
 
-@media screen and ( min-width:501px) and ( max-width : 980px) {
+@media screen and ( min-width:401px) and ( max-width : 980px) {
      .topview{
         width: 1256px;
         HEIGHT: 737px;
