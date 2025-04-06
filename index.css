@@ -645,9 +645,11 @@ letter-spacing: 0.3;
 
 
 @media screen and ( max-width:390px) {
+
+    
     .topview{
         height: 1141px;
-        width: 730px;
+        width: 745px;
     }
     .header{
         padding-left: 1rem;
@@ -789,7 +791,7 @@ letter-spacing: 0.3;
     .tracksection
     {
         height: 579px;
-        width: 709px;
+        width: 745px;
     }
     .case{
         margin-left: 12px;
@@ -923,7 +925,7 @@ letter-spacing: 0.3;
     }
     .endsection{
         background-color: rgba(8, 19, 21, 1);
-       width: 730px;
+       width: 745px;
     }
     .endsection h1{
         font-size: unset;
