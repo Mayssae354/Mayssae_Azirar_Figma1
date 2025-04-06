@@ -865,7 +865,9 @@ letter-spacing: 0.3;
     }
     .tryright img{
         height: 100%;
+        width: 115%;
         margin-left: -4rem;
+
     }
     .trialnow{
         margin-top: -16rem;
