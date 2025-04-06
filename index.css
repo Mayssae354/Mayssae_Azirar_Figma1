@@ -647,10 +647,11 @@ letter-spacing: 0.3;
 @media screen and ( max-width:390px) {
     .topview{
         height: 1141px;
-        width: 589px;
+        width: 651px;
     }
     .header{
         padding-left: 1rem;
+        padding-right: 1rem;
     }
     .header img{
         width: 20%;
@@ -665,8 +666,8 @@ letter-spacing: 0.3;
         margin-top: -70px;
     }
     .topvi{
-        margin-left: -95.5px;
-        margin-top: -37rem;
+        margin-left: -34.5px;
+        margin-top: -40rem;
     }
     .appsection
     {
@@ -679,7 +680,7 @@ letter-spacing: 0.3;
         margin-top: 100px;
         display: flex;
         justify-content: center;
-        width: 90%;
+        width: 107%;
         height: 38px;
         padding: 2px 0rem 0rem 1rem;
         Font-size : 10px
@@ -690,6 +691,13 @@ letter-spacing: 0.3;
         width: 20%;
         height: 100%;
         Font-size : 10px
+    }
+    .mob{
+        margin-top: 8rem;
+        margin-left: 5rem;
+    }
+    .vect{
+        margin-left: 3rem;
     }
     .donnerdown{
         display: flex;
@@ -704,20 +712,23 @@ letter-spacing: 0.3;
     }
     .appright h1{
         text-align: center;
-        margin-left: 5rem;
-        Font-size : 17px
+        margin-left: 2rem;
+        width: 522px;
+        font-size: xx-large;
     }
+   
     .graphs{
         text-align: center;
-        Font-size : 17px
+        Font-size : 17px;
+        width: 588px;
     }
     .textf{
-        margin-left: 2rem;
+        margin-left: 1rem;
         Font-size : 18px
     }
 
     .pcsection{
-        width: 96%;
+        width: 127%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -727,19 +738,19 @@ letter-spacing: 0.3;
         Font-size : 16px
     }
     .pcsectiongauche{
-        width: 100%;
+        width: 93%;
     }
     .pcsectiondroit{
-        width: 529px;
-        height: 380px;
+        width: 567px;
+        height: 384px;
         margin-top: 5px;
-        margin-left: 10px;
+        margin-left: -46px;
     }
     .pctextgauche{
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2rem;
+        padding: 1rem;
         font-size: 21px;
     }
     .pcsectiondroit img{
@@ -750,12 +761,11 @@ letter-spacing: 0.3;
     .pcpsection{
         display: flex;
         flex-direction: column;
-        align-items: start;
         padding: 2rem;
         text-align: center;
-        width: 100%;
-        margin-left: -2rem;
-        font-size: 18px;
+        width: 105%;
+        margin-left: -3rem;
+       font-size: 23px;
     }
     .schedule_title{
     text-align: center;
@@ -779,14 +789,14 @@ letter-spacing: 0.3;
     .tracksection
     {
         height: 579px;
-        width: 589px;
+        width: 651px;
     }
     .case{
-        margin-left: 5px;
+        margin-left: 12px;
         margin-top: 23px;
-        width: 530px;
+        width: 570px;
         height: 281px;
-        gap: 17px;
+        gap: 16px;
     }
     .cls{
         width: 25%;
@@ -817,11 +827,11 @@ letter-spacing: 0.3;
         height: 600px;  
     }
     .commentstitle{
-        margin-left: 1rem;
+        margin-left: 2rem;
         text-align: center;
     }
     .commentsreview{
-        margin-left: -3rem;
+        margin-left: -1rem;
     }
     .comments{
         margin: 6rem 0rem 2rem 5rem;
@@ -834,8 +844,8 @@ letter-spacing: 0.3;
         height: 520px;
     }
     .rectangle{
-        width: 134%;
-        height: 464px;
+        width: 151%;
+        height: 438px;
     border-radius: 18px;
     margin: 2rem 7rem 2rem 2rem;
     }
@@ -855,11 +865,11 @@ letter-spacing: 0.3;
     }
     .tryright img{
         height: 100%;
-        margin-left: -16rem;
+        margin-left: -10rem;
     }
     .trialnow{
-        margin-top: -17rem;
-        margin-left: 2.5rem;
+        margin-top: -16rem;
+        margin-left: 3.5rem;
         padding: 10px;
     }
     .trialnow p{
@@ -872,7 +882,7 @@ letter-spacing: 0.3;
     }
     .elyansection{
         padding: 3rem 6.5rem 0rem 0rem;
-        width: 476px;
+        width: 514px;
         height: 58%;
         gap: 2rem;
 
@@ -905,6 +915,7 @@ letter-spacing: 0.3;
     }
     .endsection{
         background-color: rgba(8, 19, 21, 1);
+        width: 650px;
     }
     .endsection h1{
         font-size: unset;
