@@ -647,7 +647,7 @@ letter-spacing: 0.3;
 @media screen and ( max-width:390px) {
     .topview{
         height: 1141px;
-        width: 651px;
+        width: 701px;
     }
     .header{
         padding-left: 1rem;
@@ -672,7 +672,7 @@ letter-spacing: 0.3;
     .appsection
     {
         height: 1095px;
-        width: 589px;
+        width: 701px;
         Font-size : 10px
     }
     
@@ -680,7 +680,7 @@ letter-spacing: 0.3;
         margin-top: 100px;
         display: flex;
         justify-content: center;
-        width: 107%;
+        width: 100%;
         height: 38px;
         padding: 2px 0rem 0rem 1rem;
         Font-size : 10px
@@ -707,7 +707,7 @@ letter-spacing: 0.3;
     }
     .appright {
         margin-top: 3rem;
-        margin-left: 2rem;
+        margin-left: 3rem;
         Font-size : 10px
     }
     .appright h1{
@@ -723,12 +723,12 @@ letter-spacing: 0.3;
         width: 588px;
     }
     .textf{
-        margin-left: 1rem;
+        margin-left: 2rem;
         Font-size : 18px
     }
 
     .pcsection{
-        width: 127%;
+        width: 139%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -789,12 +789,12 @@ letter-spacing: 0.3;
     .tracksection
     {
         height: 579px;
-        width: 651px;
+        width: 709px;
     }
     .case{
         margin-left: 12px;
         margin-top: 23px;
-        width: 570px;
+        width: 630px;
         height: 281px;
         gap: 16px;
     }
@@ -827,8 +827,12 @@ letter-spacing: 0.3;
         height: 600px;  
     }
     .commentstitle{
-        margin-left: 2rem;
+        
         text-align: center;
+        width: 525px;
+    }
+    .commentstitle p{
+        font-size: larger;
     }
     .commentsreview{
         margin-left: -1rem;
@@ -838,21 +842,22 @@ letter-spacing: 0.3;
         display: flex;
         flex-direction: column;
         width: 407px;
-        gap: 8rem;
+        gap: 4rem;
     }
     .trialsection{
         height: 520px;
+        width: 701px;
     }
     .rectangle{
-        width: 151%;
+        width: 92%;
         height: 438px;
     border-radius: 18px;
     margin: 2rem 7rem 2rem 2rem;
     }
     .trialleft{
-        width: 261px;
+        width: 294px;
         height: 423px;
-    padding: 1rem 0rem 1rem 1rem;
+        padding: 2rem 0rem 1rem 2rem;
     
     }
     .trialleft h1{
@@ -881,6 +886,7 @@ letter-spacing: 0.3;
 
     .endsection{
         height: 546px;
+
     }
     .elyansection{
         padding: 3rem 6.5rem 0rem 0rem;
@@ -917,7 +923,7 @@ letter-spacing: 0.3;
     }
     .endsection{
         background-color: rgba(8, 19, 21, 1);
-        width: 650px;
+       width: 701px;
     }
     .endsection h1{
         font-size: unset;
