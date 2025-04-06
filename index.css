@@ -1,7 +1,10 @@
 body{
     margin: 0;
+    
 }
 .topview{
+
+    
     background-color: #00A8DB;
     width: 100%;
     HEIGHT: 720px;
@@ -64,7 +67,7 @@ body{
     margin-top: -13px;
 }
 .topvi{
-    margin-left: 38.5px;
+    margin-left: 22.5px;
 }
 .viewp{
     width: 382px;
@@ -299,7 +302,7 @@ body{
 }
 .case{
     display: flex;
-    text-align: start;
+    text-align: center;
     gap: 24px;
     margin-left: 70px;
     margin-top:40px;
@@ -589,87 +592,48 @@ letter-spacing: 0.3;
 
 
 
-
-
-
-
-@media screen and ( min-width:882px) {
-
-.topview{
-    Font-size : 20px;
-    width: 100%;
-    HEIGHT: 720px;
-}
-
-.appsection
-{
-    Font-size : 20px;
-    height: 820px;
-    width: 700px;
-}
-
-.pcsection{
-    display: flex;
-    padding: 3rem;
-    Font-size : 20px;
-}
-.tracksection{
-    width: 100%;
-    height: 600px;
-    Font-size : 20px;
-}
-
-.commentsection{
-    width: 100%;
-    height: 480px;  
-    Font-size : 20px;
-}
-
-.trialsection{
-    height: 480px;
-    Font-size : 20px;
-}
-
-.endsection{
-   
-   height: 625px;
-   Font-size : 20px;
-}
-
-
-}
-
-
-
-
-
-
-@media screen and ( max-width:390px) {
-
-    
+@media screen and ( max-width:500px) {
     .topview{
         height: 1141px;
         width: 745px;
     }
+    .rightview{
+    gap: 33px;
+    margin-top: 6rem;
+    margin-left: -6rem;
+    }
+    .rightview p{
+        font-size: x-large;
+    }
+    .viewp{
+        width: 512px;
+    height: 80px;
+    font-size: x-large;
+    font-family: "DM Sans", sans-serif;
+    }
     .header{
         padding-left: 1rem;
         padding-right: 1rem;
+        padding-top: 3px;
     }
     .header img{
-        width: 20%;
+        width: 19%;
+        margin-left: 2rem;
     }
     .topviewdown{
         display: flex;
         flex-direction: column;
     }
-    
+    .textfleche{
+        Font-size: 17px;
+    }
     .topviewleft{
         margin-left: -33px;
         margin-top: -70px;
     }
     .topvi{
         margin-left: -34.5px;
-        margin-top: -45rem;
+        margin-top: -52rem;
     }
     .appsection
     {
@@ -930,4 +894,73 @@ letter-spacing: 0.3;
     .endsection h1{
         font-size: unset;
     }
+}
+
+
+
+
+@media screen and ( min-width:501px) and ( max-width : 980px) {
+     .topview{
+        width: 1256px;
+        HEIGHT: 737px;
+    }
+    .header{
+        padding-top: 49px;
+        width: 1030px;
+        height: 47px;
+    }
+   
+    .pcsectiondroit img{
+        width: 618px;
+    }
+    .schedule_title{
+        width: 505px;
+        margin-left: 3rem;
+    }
+    .pcpsection{
+        width: 438px;
+    text-align: center;
+    }
+   
+
+    .tracksection{
+        width: 1256px;
+    }
+
+    .endsection{
+        width: 1256px;
+    }
+}
+
+
+@media screen and ( min-width :981px) {
+    .topview{
+
+        width: 1675px;
+       height: 100%;
+    }
+    ;.header{
+        padding-top: 62px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    }
+    .rightview{
+        margin-left: 10rem;
+    }
+    .topvi{
+        margin-left: 28.6rem;
+        margin-top: 3rem;
+    
+    }
+    .topviewright{
+        width: 939px;
+    height: 1124px;
+    margin-top: -517px;
+    margin-left: -254px;
+    }
+    .cercle{
+        width: 500px;
+        height: 500px;
+    }
+
 }
