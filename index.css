@@ -592,7 +592,7 @@ letter-spacing: 0.3;
 
 
 
-@media screen and ( max-width:500px) {
+@media screen and ( max-width:390px) {
     .topview{
         height: 1141px;
         width: 745px;
@@ -933,34 +933,3 @@ letter-spacing: 0.3;
 }
 
 
-@media screen and ( min-width :981px) {
-    .topview{
-
-        width: 1675px;
-       height: 100%;
-    }
-    ;.header{
-        padding-top: 62px;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    }
-    .rightview{
-        margin-left: 10rem;
-    }
-    .topvi{
-        margin-left: 28.6rem;
-        margin-top: 3rem;
-    
-    }
-    .topviewright{
-        width: 939px;
-    height: 1124px;
-    margin-top: -517px;
-    margin-left: -254px;
-    }
-    .cercle{
-        width: 500px;
-        height: 500px;
-    }
-
-}
