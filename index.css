@@ -6,7 +6,7 @@ body{
 
     
     background-color: #00A8DB;
-    width: 100%;
+    width: fit-content;
     HEIGHT: 720px;
 }
 .header{
@@ -67,7 +67,7 @@ body{
     margin-top: -13px;
 }
 .topvi{
-    margin-left: 22.5px;
+    margin-left: 38.5px;
 }
 .viewp{
     width: 382px;
@@ -221,7 +221,7 @@ body{
 .pcpsection{
     font-family: "DM Sans", sans-serif;
     color: #90A3B4;
-    width: 450px;
+    
 }
 .pclist
 {
@@ -542,7 +542,10 @@ letter-spacing: 0.3;
     font-style: solid;
 }
 
-
+.downtrial img{
+    width: 145px;
+    height: 43px;
+}
 
 
 .endsection{
@@ -592,11 +595,31 @@ letter-spacing: 0.3;
 
 
 
-@media screen and ( max-width:390px) {
+@media screen and ( max-width:500px) {
     .topview{
-        height: 1141px;
-        width: 745px;
+        height: 1197px;
+        width: 855px;
     }
+    .topviewleft{
+        display: flex
+ ;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    }
+    .topviewleft img{
+        margin-left: -165px;
+    }
+    .topvi{
+        margin-left: -102.5px;
+        margin-top: -55rem;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  
     .rightview{
     gap: 33px;
     margin-top: 6rem;
@@ -612,13 +635,13 @@ letter-spacing: 0.3;
     font-family: "DM Sans", sans-serif;
     }
     .header{
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 6rem;
+        padding-right: 11rem;
         padding-top: 3px;
     }
     .header img{
         width: 19%;
-        margin-left: 2rem;
+        
     }
     .topviewdown{
         display: flex;
@@ -631,10 +654,7 @@ letter-spacing: 0.3;
         margin-left: -33px;
         margin-top: -70px;
     }
-    .topvi{
-        margin-left: -34.5px;
-        margin-top: -52rem;
-    }
+    
     .appsection
     {
         height: 1095px;
@@ -646,7 +666,7 @@ letter-spacing: 0.3;
         margin-top: 100px;
         display: flex;
         justify-content: center;
-        width: 100%;
+                width: 838px;
         height: 38px;
         padding: 2px 0rem 0rem 1rem;
         Font-size : 10px
@@ -658,6 +678,9 @@ letter-spacing: 0.3;
         height: 100%;
         Font-size : 10px
     }
+   .appleft{
+    margin-top: -2rem;
+   }
     .mob{
         margin-top: 8rem;
         margin-left: 5rem;
@@ -668,12 +691,11 @@ letter-spacing: 0.3;
     .donnerdown{
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        Font-size : 10px
+        text-align: center;
     }
     .appright {
         margin-top: 3rem;
-        margin-left: 3rem;
+        margin-left: 10rem;
         Font-size : 10px
     }
     .appright h1{
@@ -689,7 +711,7 @@ letter-spacing: 0.3;
         width: 588px;
     }
     .textf{
-        margin-left: 2rem;
+        margin-left: 12rem;
         Font-size : 18px
     }
 
@@ -707,7 +729,7 @@ letter-spacing: 0.3;
         width: 93%;
     }
     .pcsectiondroit{
-        width: 567px;
+        width: 88%;
         height: 384px;
         margin-top: 5px;
         margin-left: -46px;
@@ -716,81 +738,83 @@ letter-spacing: 0.3;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 12rem;
+        width: max-content;
         padding: 1rem;
         font-size: 21px;
     }
-    .pcsectiondroit img{
-        margin-left: 1rem;
-        width: 105%;
-    }
-
+    
+    
     .pcpsection{
         display: flex;
         flex-direction: column;
         padding: 2rem;
         text-align: center;
-        width: 105%;
-        margin-left: -3rem;
+        width: 39rem;
+        margin-left: 2rem;
+        
        font-size: 23px;
     }
     .schedule_title{
     text-align: center;
+    margin-left: 12rem;
+    width: max-content;
     }
 
     .pclist
     {
     display: flex; 
-    display: flex
-;
+   
         font-size: 21px;
         margin: -11px;
-        margin-left: 0; 
+        margin-left: 27px;
     }
    
     .pcsectiondroit img{
-    width: 100%;
+        margin-left: 4rem;
+        width: max-content;
     }
 
 
     .tracksection
     {
-        height: 579px;
-        width: 745px;
+        height: 543px;
+        width: 855px;
     }
     .case{
         margin-left: 12px;
+      
         margin-top: 23px;
-        width: 630px;
+        width: max-content;
         height: 281px;
         gap: 16px;
     }
     .cls{
         width: 25%;
-        height: 277px;
+        height: 255px;
     }
     .trackimage{
-        width: 20%;
-        height: 42px;
+        width: 25%;
+        height: 48px;
         margin-top: 16px;
-        margin-left: 16px;
+        margin-left: -109px;
     }
     .h1track{
-        width: 57%;
-        font-size: inherit;
+        width: 84%;
+        font-size: larger;
         overflow-x: clip;
         line-height: 20px;
-        margin-left: 14px;
+        margin-left: 13px;
     }
     .ptrack{
-        overflow-x: clip;
-        width: 57%;
-        margin-top: 36px;
-        line-height: 20px;
+        width: 93%;
+        margin-top: 28px;
+        margin-left: 8px;
     }
     .commentsection{
        
         width: 100%;
-        height: 600px;  
+        height: 579px;
     }
     .commentstitle{
         
@@ -804,7 +828,7 @@ letter-spacing: 0.3;
         margin-left: -1rem;
     }
     .comments{
-        margin: 6rem 0rem 2rem 5rem;
+        margin: 6rem 0rem 3rem 10rem;
         display: flex;
         flex-direction: column;
         width: 407px;
@@ -812,7 +836,7 @@ letter-spacing: 0.3;
     }
     .trialsection{
         height: 520px;
-        width: 730px;
+        width: 865px;
     }
     .rectangle{
         width: 92%;
@@ -842,7 +866,7 @@ letter-spacing: 0.3;
     }
     .trialnow{
         margin-top: -16rem;
-        margin-left: 3.5rem;
+        margin-left: 7.5rem;
         padding: 10px;
     }
     .trialnow p{
@@ -852,54 +876,51 @@ letter-spacing: 0.3;
 
     .endsection{
         height: 546px;
+        width: 851px;
 
     }
     .elyansection{
-        padding: 3rem 6.5rem 0rem 0rem;
+        padding: 3rem 0rem 0rem 2rem;
         width: 514px;
         height: 58%;
-        gap: 2rem;
+        gap: 4rem;
+        
 
 
     }
     .ehya{
-        width: 16%;
+        width: 20%;
     }
     .product{
-        width: 20%;
+        width: 24%;
     }
     .section{
-        width: 20%;
+        width: 23%;
     }
     .company{
         width: 20%;
     }
     .more{
-        width: 20%;
+        width: 24%;
     }
     .icons{
-        margin-top: 3rem;
+        margin-top: 6rem;
     }
     .heart{
-        margin-left: 10rem;
-        width: 452px;
-    height: 33.5%;
+        margin-left: 17rem;
+        width: max-content;
+        height: 33.5%;
+        background-color: inherit;
+        margin-top: -1rem;
+    }
     
-    background-color: inherit;
-    }
-    .endsection{
-        background-color: rgba(8, 19, 21, 1);
-       width: 745px;
-    }
     .endsection h1{
         font-size: unset;
     }
 }
 
-
-
-
-@media screen and ( min-width:401px) and ( max-width : 980px) {
+@media screen and (min-width: 501px) and (max-width: 1000px)
+{
      .topview{
         width: 1256px;
         HEIGHT: 737px;
@@ -909,27 +930,128 @@ letter-spacing: 0.3;
         width: 1030px;
         height: 47px;
     }
-   
-    .pcsectiondroit img{
-        width: 618px;
+    .headimg{
+        width: 133px;
+    height: 45px;
+    }
+    .flech{
+        gap: 41px;
+    }
+    .flechimg{
+       margin-left: -2rem;
     }
     .schedule_title{
         width: 505px;
         margin-left: 3rem;
     }
     .pcpsection{
-        width: 438px;
+       
     text-align: center;
     }
    
+    .pcsectiondroit{
+        width: max-content;
 
+    }
+    .pcsectiondroit img{
+        width: max-content;
+        margin-top: 6rem;
+    }
+    .pcpsection{
+        width: 503px;
+        font-size: x-large;
+    }
+    .pctextgauche{
+        font-size: larger;
+    }
+    .schedule_title{
+        width: 414px;
+        margin-left: 7rem;
+    }
+    .pclist{
+        font-size: larger;
+    }
     .tracksection{
         width: 1256px;
+        height: 990px;
+    }
+    .case{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cls{
+        width: 360px;
+        height: 335px;
+    }
+    .h1track{
+        font-size: xx-large;
+        width: 288px;
+        line-height: 32px;
+    }
+    .ptrack{
+        font-size: x-large;
+        margin-top: 46px;
+        width: 324px;
+    }
+    .p1{
+        font-size: larger;
+    }
+    .cls p{
+        font-size: x-large;
+    }
+    .trackimage{
+        height: 92px;
+    width: 92px;
+    margin-left: -28px;
+    }
+    .rightview p{
+        font-size: x-large;
     }
 
     .endsection{
         width: 1256px;
     }
+    .elyansection{
+        padding: 4rem 0rem 0rem 3rem;
+    }
+    .elyansection p{
+        font-size: x-large;
+    }
+    .elyansection h1{
+        font-size: xx-large;
+    }
+    .ehya img {
+        width: 128px;
+    }
+    .icons{
+        margin-top: 7rem;
+    }
+    .heart h1{
+        width: max-content;
+        font-size: x-large;
+    }
 }
 
 
+@media screen and (min-width: 1001px) 
+{
+    
+    .pcsectiondroit img{
+        width: 140%;
+        margin-left: -12rem;
+    }
+    .pcpsection{
+        width: 72%;
+    }
+    .tracksection{
+        width: max-content;
+        margin-left: 1rem;
+    }
+    .elyansection{
+        padding: 7rem 15rem 0rem 8rem;
+        margin-left: 3.5rem;
+    }
+    .endsection{
+        width: max-content;
+    }
+}
