@@ -10,8 +10,8 @@ body{
 
     
     background-color: #00A8DB;
-    width: fit-content;
-    HEIGHT: 720px;
+    HEIGHT: 737px;
+    width: 1256px;
 }
 .header{
     justify-content: space-between;
@@ -1166,3 +1166,30 @@ letter-spacing: 0.3;
     }
 }
 
+@media screen and (min-width: 1001px)
+{
+    .topview{
+        width: 1256px;
+    }
+
+    .topvi{
+        width: 48rem;
+        height: 49rem;
+        margin-left: 14px;
+    }
+    .appsection{
+        width: 1256px;
+    }
+    .tracksection{
+        width: 1256px;
+    }
+    .commentsection{
+        width: 1256px;
+    }
+    .trialsection{
+        width: 1256px;
+    }
+    .endsection{
+        width: 1256px;
+    }
+}
