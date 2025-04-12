@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
 body{
     margin: 0;
     
@@ -22,6 +26,11 @@ body{
     width: 90px;
     height: 28px;
 }
+.header img:hover{
+    cursor: pointer;
+    border: 2px solid;
+    border-color: transparent;
+}
 
 .rightview{
     display: flex;
@@ -37,6 +46,19 @@ body{
     letter-spacing: 0.3px;
     width: 62px;
     height: 18px;
+}
+.rightview p:hover{
+    cursor: pointer;
+    color: rgba(0, 84, 144, 1);
+    border: 1px solid;
+    border-color: transparent;
+}
+.rightview img{
+    transition: box-shadow 0.3s ease;
+}
+.rightview img:hover{
+    cursor: pointer;
+    box-shadow: 2px 1px 8px 2px #152c41;
 }
 .flech{
     display: flex;
@@ -65,7 +87,9 @@ body{
     height: 30.92px;
     margin-left: 110px;
     margin-top: -13px;
+    transition: box-shadow 0.3s ease;
 }
+
 .topvi{
     margin-left: 38.5px;
 }
@@ -88,18 +112,32 @@ body{
     text-align: center;
     margin-left: 100px;
 }
-
+.textdiv:hover{
+    cursor: pointer;
+    background-color: rgb(0, 168, 219);
+    color: #EFFBFF;
+    border: 2px solid;
+    border-color:  rgba(0, 84, 144, 1);
+}
 .textfleche{
     display: flex;
     align-items: center;
     gap: 6px; 
     margin: 0; 
 }
+.textfleche:hover{
+    cursor: pointer;
+    border: 2px solid;
+    border-color: transparent;
+}
 .textfleche p{
     font: bold;
     color: #FFFFFF;
     letter-spacing: 0px;
     align-items: center;
+}
+.textfleche p:hover{
+    color: rgba(0, 84, 144, 1);
 }
 .textfleche img{
     width: 20px;
@@ -142,12 +180,21 @@ body{
     justify-content: center;
     width: 1109px;
     height: 38px;
-  
+   
     padding: 0px 2rem 0rem 6.7rem;
 }
 .apptop img{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    width: fit-content;
+    border-radius: 10px;
+    width: max-content;
+}
+.apptop img:hover{
+    cursor: pointer;
+   
+    border: 2px solid;
+    border-color: transparent;
 }
 .vect{
     margin-top: -30rem;
@@ -179,10 +226,16 @@ body{
     height: 21px;
 
 }
-.textf img{
-    margin-top: 2px;
-    height: 9px;
-    width: 15px;
+
+.textf p:hover{
+    cursor: pointer;
+    color: rgba(0, 84, 144, 1);
+    border: 2px solid;
+    border-color: transparent;
+}
+
+.appleft img:hover{
+    cursor: pointer;
 }
 .donnerdown{
     display: flex;
@@ -233,15 +286,22 @@ body{
     width: 16px;
     height: 20px;
 }
+.pclist img:hover{
+    cursor: pointer;
+    border: 1px solid;
+    border-color: transparent;
+}
 .pctextgauche{
     display: flex;
     align-items: center;
     gap: 8px;
 }
-.pctextgauche img{
-    margin-top: 2px;
-    height: 9px;
-    width: 15px;   
+.pctextgauche p:hover{
+    cursor: pointer;
+    color: rgba(0, 84, 144, 1);
+    border: 2px solid;
+    border-radius: 30px;
+    border-color:  transparent;
 }
 .pcsectiongauche p{
     font-family: "DM Sans", sans-serif;
@@ -256,10 +316,12 @@ body{
     height: 410px;
     margin-top: 35px;
 }
-.pcsectiondroit img{
-    width: 100%;
+.pcsectiondroit img {
+    width: 561px;
     height: 100%;
+    margin-right: -2rem;
 }
+
 .pcsection{
     display: flex;
     padding: 3rem;
@@ -269,8 +331,9 @@ body{
 
 .tracksection{
     background-color: #EFFBFF;
-    width: 100%;
+    width: 1256px;
     height: 600px;
+    box-sizing: border-box;
 }
 .enfant1{
     background-color: aqua;
@@ -304,6 +367,8 @@ body{
     display: flex;
     text-align: center;
     gap: 24px;
+   flex-wrap: wrap;
+    justify-content: center;
     margin-left: 70px;
     margin-top:40px;
     width: 1160px;
@@ -312,6 +377,8 @@ body{
 .cls{
     background-color: #FFFFFF;
     width: 259px;
+    width: 100%;
+    max-width: 260px;
     height: 300px;
     border-radius: 3%;
 }
@@ -323,10 +390,11 @@ body{
     width: 56px;
     border-radius: 20%;
     margin-top: 22px;
-    margin-left: 22px;
+    margin-left: -90px;
 }
 .ptrack{
     font-family: "DM Sans", sans-serif;
+    text-align: left;
     font-weight: 400;
     margin-left: 21px;
     margin-right: 16px;
@@ -341,6 +409,7 @@ body{
 }
 .h1track{
     font-size: medium;
+    text-align: justify;
     font-family: "DM Sans", sans-serif;
     margin-left: 21px;
     width: 161px;
@@ -350,6 +419,10 @@ body{
     line-height: 25px;
     letter-spacing: 0.2px;
     color: #034D82;
+}
+.h1track:hover{
+    cursor: pointer;
+    color: rgb(59, 142, 202);
 }
 .grp
 {
@@ -422,6 +495,14 @@ letter-spacing: 0.3;
    margin-right: 1.5rem;
    height: 20px;
     width: 20px;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease;
+
+}
+.flecheleft:hover{
+    cursor: pointer;
+    border: 2px solid;
+    border-color: rgba(0, 84, 144, 1);
 }
 .jaquonprofile{
     display: flex;
@@ -430,8 +511,12 @@ letter-spacing: 0.3;
     gap: 0.5rem;
     margin-top: 10px;
 }
+.jaquonprofile img:hover{
+    cursor: pointer;
+}
 .name h1{
     margin: 0;
+    width: fit-content;
     color: rgba(3, 77, 130, 1);
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
@@ -439,6 +524,10 @@ letter-spacing: 0.3;
     line-height: 24px;
     letter-spacing: 0.2px;
     font-size: medium;
+}
+.name h1:hover{
+    cursor: pointer;
+    color:#2074b0
 }
 .name p{
     color: rgba(144, 163, 180, 1);
@@ -451,13 +540,24 @@ letter-spacing: 0.3;
 }
 
 .flechedroi{
-    width: 124px;
-    height: 124px;
-    margin-top: -2rem;
+    width: 70px;
+    height: 70px;
+    margin-top: 0rem;
     margin-left: 1rem;
+    transition: box-shadow 0.3s ease;
+    border-radius: 50%;
+}
+.flechedroi:hover{
+    cursor: pointer;
+    
+    box-shadow: 2px 1px 8px 2px #152c41;
 }
 .rightcomments{
     width: 421px;
+}
+.rightcomments img:hover{
+    cursor: pointer;
+    
 }
 .double{
     margin-left: 1.5rem;
@@ -468,7 +568,12 @@ letter-spacing: 0.3;
     margin-top: 3rem;
     gap: 7px;
 }
-
+.points img:hover{
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:  rgb(112, 112, 180);
+}
 
 
 
@@ -529,10 +634,24 @@ letter-spacing: 0.3;
     width: 11rem;
     border-radius: 7px;
 }
+.trialnow:hover{
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: rgba(0, 184, 217, 1);
+    border: 2px solid;
+    border-color:  rgba(0, 84, 144, 1);
+}
 .trialnow p{
     margin-left: 1.5rem;
 }
-
+.others:hover{
+    cursor: pointer;
+    color: #f0ebeb;
+}
+.downtrial img{
+    cursor: pointer;
+   
+}
 .tryright img{
     height: 322px;
     
@@ -550,8 +669,11 @@ letter-spacing: 0.3;
 
 .endsection{
     background-color: rgba(8, 19, 21, 1);
+    width: 1256px;
    height: 625px;
+   box-sizing: border-box;
 }
+
 .elyansection{
     width: 828px;
     height: 350px;
@@ -564,6 +686,19 @@ letter-spacing: 0.3;
 .ehya{
     width: 263px;
 }
+.ehya img:hover{
+    cursor: pointer;
+}
+.elyansection h1:hover{
+    cursor: pointer;
+    color: rgba(0, 84, 144, 1);
+    border: 1px solid;
+    border-color: transparent;
+}
+.heart h1:hover{
+    cursor: pointer;
+   
+}
 .elyansection p{
     color: rgba(211, 214, 216, 1);
     font-family: "DM Sans", sans-serif;
@@ -573,6 +708,7 @@ letter-spacing: 0.3;
 }
 .endsection h1{
     color: rgba(255, 255, 255, 1);
+    width: fit-content;
     font-weight: 700;
     size: 18px;
     line-height: 100%;
@@ -601,11 +737,10 @@ letter-spacing: 0.3;
         width: 855px;
     }
     .topviewleft{
-        display: flex
- ;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .topviewleft img{
         margin-left: -165px;
@@ -778,8 +913,8 @@ letter-spacing: 0.3;
 
     .tracksection
     {
-        height: 543px;
-        width: 855px;
+        height: 802px;
+        width: 865px;
     }
     .case{
         margin-left: 12px;
@@ -877,6 +1012,7 @@ letter-spacing: 0.3;
     .endsection{
         height: 546px;
         width: 851px;
+        
 
     }
     .elyansection{
@@ -922,7 +1058,7 @@ letter-spacing: 0.3;
 @media screen and (min-width: 501px) and (max-width: 1000px)
 {
      .topview{
-        width: 1256px;
+        width: 1291px;
         HEIGHT: 737px;
     }
     .header{
@@ -972,26 +1108,24 @@ letter-spacing: 0.3;
         font-size: larger;
     }
     .tracksection{
-        width: 1256px;
-        height: 990px;
+        width: 1291px;
+        height: 689px;
     }
-    .case{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    
     .cls{
         width: 360px;
         height: 335px;
     }
     .h1track{
-        font-size: xx-large;
+        font-size: x-large;
+        text-align: justify;
         width: 288px;
         line-height: 32px;
     }
     .ptrack{
         font-size: x-large;
-        margin-top: 46px;
-        width: 324px;
+        width: inherit;
+        text-align: -webkit-left;
     }
     .p1{
         font-size: larger;
@@ -1009,7 +1143,7 @@ letter-spacing: 0.3;
     }
 
     .endsection{
-        width: 1256px;
+        width: 1291px;
     }
     .elyansection{
         padding: 4rem 0rem 0rem 3rem;
@@ -1032,26 +1166,3 @@ letter-spacing: 0.3;
     }
 }
 
-
-@media screen and (min-width: 1001px) 
-{
-    
-    .pcsectiondroit img{
-        width: 140%;
-        margin-left: -12rem;
-    }
-    .pcpsection{
-        width: 72%;
-    }
-    .tracksection{
-        width: max-content;
-        margin-left: 1rem;
-    }
-    .elyansection{
-        padding: 7rem 15rem 0rem 8rem;
-        margin-left: 3.5rem;
-    }
-    .endsection{
-        width: max-content;
-    }
-}
