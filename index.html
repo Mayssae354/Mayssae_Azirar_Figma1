@@ -165,7 +165,7 @@
       }
     }
 
-    /* Particules décoratives */
+  
     .particles {
       position: absolute;
       top: 0;
@@ -230,22 +230,21 @@
   </div> 
 
   <script>
-    // Création des particules
+ 
     const particlesContainer = document.getElementById('particles');
     for (let i = 0; i < 20; i++) {
       const particle = document.createElement('div');
       particle.classList.add('particle');
-      
-      // Taille aléatoire entre 2px et 6px
+    
       const size = Math.random() * 4 + 2;
       particle.style.width = `${size}px`;
       particle.style.height = `${size}px`;
       
-      // Position aléatoire
+
       particle.style.left = `${Math.random() * 100}%`;
       particle.style.top = `${Math.random() * 100}%`;
       
-      // Animation aléatoire
+   
       particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
       particle.style.animationDelay = `${Math.random() * 5}s`;
       
