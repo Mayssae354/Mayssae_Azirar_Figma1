@@ -1,300 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>figma</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>ehya Intro</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    
+    body {
+      background: linear-gradient(135deg, #00AEEF, #0074B7);
+      background-size: 400% 400%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      animation: gradientBG 8s ease infinite;
+    }
+
+    .site {
+      text-align: center;
+      position: relative;
+    }
+
+    .logo1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .logo1 span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: letterDrop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    .logo {
+      font-size: 6rem;
+      font-weight: 700;
+      color: white;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .logo span {
+      display: inline-block;
+      opacity: 0;
+      transform: scale(0.5) rotate(-30deg);
+      animation: letterPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+
+  
+    .logo1 span:nth-child(1) { animation-delay: 0.1s; }
+    .logo1 span:nth-child(2) { animation-delay: 0.2s; }
+    .logo1 span:nth-child(3) { animation-delay: 0.3s; }
+    .logo1 span:nth-child(4) { animation-delay: 0.4s; }
+    .logo1 span:nth-child(5) { animation-delay: 0.5s; }
+    .logo1 span:nth-child(6) { animation-delay: 0.6s; }
+    .logo1 span:nth-child(7) { animation-delay: 0.7s; }
+    .logo1 span:nth-child(8) { animation-delay: 0.8s; }
+    .logo1 span:nth-child(9) { animation-delay: 0.9s; }
+    .logo1 span:nth-child(10) { animation-delay: 1.0s; }
+
+    .logo span:nth-child(1) { animation-delay: 1.2s; }
+    .logo span:nth-child(2) { animation-delay: 1.3s; }
+    .logo span:nth-child(3) { animation-delay: 1.4s; }
+    .logo span:nth-child(4) { animation-delay: 1.5s; }
+    .logo span:nth-child(5) { animation-delay: 1.6s; }
+
+    @keyframes letterDrop {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes letterPop {
+      0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-30deg);
+      }
+      70% {
+        transform: scale(1.1) rotate(5deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+      }
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .photo {
+      opacity: 0;
+      animation: fadeInPhoto 1s ease-out forwards;
+      animation-delay: 2s;
+      margin: 30px 0;
+    }
+
+    .photo img {
+      width: 120px;
+      height: auto;
+      filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+      transform-origin: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeInPhoto {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-15px) rotate(2deg);
+      }
+    }
+
+    .footer-text {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      margin-top: 20px;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Particules décoratives */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      background-color: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      animation: floatParticle 15s linear infinite;
+    }
+
+    @keyframes floatParticle {
+      0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    
-<div class="topview">
-        <div class="header">
-            <img class="headimg" src="./images/icons/ehya.png" alt="">
-
-            <div class="rightview">
-                    <p>Home</p>
-                <div class="flech">
-                    <p>Landings</p>
-                    <img src="./images/icons/flechedown.png" alt="">
-                </div>
-                <div class="flech">
-                    <p>Pages</p>
-                    <img class="flechimg" src="./images/icons/flechedown.png" alt="">
-                </div> 
-                    <p>Docs</p>
-                    <p>Help</p>
-
-                    <img src="./images/icons/login.png" alt="">
-            </div>
-            
-            
-        </div>
-
-        <div class="topviewdown">
-            <div class="topviewleft">
-                <h1>We help you <br>
-                    grow your business <br> faster</h1>
-                <img src="./images/icons/Vector.png" alt="">
-                <p class="viewp">Ehya is the Instagram analytics platform teams use to stay focused on the goals, track engagement for report your business .</p>
-                <div class="textdown">
-                    <div class="textdiv"> <p>See how it works</p></div>
-                    <div class="textfleche">
-                        <p>Get a free demo  →</p>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <img src="./images/icons/cercle.png" alt="">
-            
-            <div class="topvi">
-                <img class="cercle" src="./images/icons/Shape.svg" alt="">
-                <img class="topviewright" src="./images/icons/overview.png" alt="">
-            </div>
-        </div>
-        
-        
-    
-</div>
-    
-<div class="appsection">
-    <div class="apptop">
-        <img src="./images/icons/slack.png" alt="">
-        <img src="./images/icons/netflix.png" alt="">
-        <img src="./images/icons/google.png" alt="">
-        <img src="./images/icons/airbnb.png" alt="">
-        <img src="./images/icons/uber.png" alt="">
+  <div class="particles" id="particles"></div>
+  
+  <div class="site"> 
+    <div class="logo1">
+      <span>W</span>
+      <span>e</span>
+      <span>l</span>
+      <span>c</span>
+      <span>o</span>
+      <span>m</span>
+      <span>e</span>
+      <span> </span>
+      <span>t</span>
+      <span>o</span>
     </div>
-    
-    <div class="donnerdown">
-        <div class="appleft">
-            <img class="mob" src="./images/icons/mobile.png" alt="">
-            <img class="vect" src="./images/icons/Vectorimage.png" alt="">
-        </div>
-     <div class="appright">
-        <h1>Measure Impressions
-            and Reach Post</h1>
-        <p class="graphs">Graphs displaying your performance for metrics like follower evolution, average engagement rate per post and reach and impressions to give you the insights.</p>
-        <div class="textf">
-            <p>Learn about graphs →</p>
-            
-        </div>
-    </div>   
-    </div>
-    
-</div>
-
-<div class="pcsection">
-    <div class="pcsectiongauche">
-            <h1 class="schedule_title">Schedule Your Post <br>Whenever You Want</h1>
-            <p class="pcpsection">Publish your content automatically to ensure that your content reaches the right people. Built-in features such as</p>
-            <div class="pclist">
-                    <img src="./images/icons/fleche.png" alt="">
-                    <p>Best Time to Post</p>
-                    </div>
-            <div class="pclist">
-                    <img src="./images/icons/fleche.png" alt="">
-                    <p>Geolocation</p>
-                    </div>
-        <div class="pclist">
-                    <img src="./images/icons/fleche.png" alt="">
-                    <p>User Tag</p>
-                    </div>
-        <div class="pclist">
-                    <img src="./images/icons/fleche.png" alt="">
-                    <p>Others benefit</p>
-                    </div>
-
-        <div class="pctextgauche">
-                        <p>Learn about scheduled post  →</p>                       
-        </div>
-    </div>
-         
-    <div class="pcsectiondroit">
-            <img src="./images/icons/pc.png" alt="">
+    <div class="logo">
+      <span>e</span>
+      <span>h</span>
+      <span>y</span>
+      <span>a</span>
+      <span>.</span>
     </div>
 
-        
-</div>
-
-<div class="tracksection">
-        <div class="barre1">
-            <h1 class="titletrack">Track any hashtag(s) Performance</h1>
-        <p class="p1">Don’t waste time on search manual tasks. Let Automation do it for you. <br> Simplify workflows, reduce errors, and save time.</p>
-        </div>
-        
-        <div class="case">
-            <div class="cls">
-                <div class="grp">
-                    <img class="trackimage" src="./images/track1/image.png" alt="">
-                    <h1 class="h1track">Hashtag Growth</h1>
-                    <p class="ptrack">Follow a hashtag growth total posts, videos and images.</p>
-            </div>
-            </div>
-            
-
-            <div class="cls">
-                <div class="grp">
-                    <img class="trackimage" src="./images/track1/tr2/image.png" alt="">   
-                    <h1 class="h1track">Influencers by <br> Hashtag</h1>    
-                    <p class="ptrack">Identify the most influential people posting with your hashtag.</p> 
-                </div>           
-            </div>
-            <div class="cls">
-                <div class="grp">
-                    <img class="trackimage" src="./images/track1/tr3/image.png" alt="">
-                    <h1 class="h1track">Most Influental Post</h1>
-                    <p class="ptrack">See the most influential posts on hashtag you
-                         are following on.</p>
-                </div>
-                
-            </div>
-            <div class="cls">
-                <div class="grp">
-                    <img class="trackimage" src="./images/track1/tr4/image.png" alt="">
-                <h1 class="h1track">Hashtag Location</h1>
-                <p class="ptrack">Visualize where people are posting using your
-                    hashtag made.</p>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-</div>
-
-
-
-
-<div class="commentsection">
-    <div class="comments">
-        <div class="commentstitle">
-            <h1>Powering the growth of 100+ business & retailers in Indonesia.</h1>
-            <p>From single store, startups, to large multi-store brands.</p>
-        </div>
-            
-            
-        <div class="commentsreview">
-            <div class="commentsicons">
-                <img class="flecheleft" src="./images/icons/flecheleft.png" alt="">
-                <img class="double" src="./images/icons/“.png" alt="">
-            </div>
-            <div class="rightcomments">
-                <img src="./images/icons/stars.png" alt="">
-                <p class="commentsreviewp">“With Ehya, we’re able to easily track our performance in full detail. It’s become an essential tool for us to grow and engage with our audience.”</p>
-                <div class="jaquonprofile">
-                    <img src="./images/icons/profile.png" alt="">
-                    <div class="name">
-                        <h1>Jaquon Hart</h1>
-                        <p>Digital Marketing Executive, Hypebeast</p>
-                    </div>
-                    <img class="flechedroi" src="./images/icons/flechedroi.png" alt="">
-                </div>
-                <div class="points">
-                    <img src="./images/icons/pointbleu.png" alt="">
-                    <img src="./images/icons/pointblanc.png" alt="">
-                    <img src="./images/icons/pointblanc.png" alt="">
-                    <img src="./images/icons/pointblanc.png" alt="">
-                    <img src="./images/icons/pointblanc.png" alt="">
-                </div>
-            </div>
-            
-        </div>
+    <div class="footer-text">
+      MADE BY MAYSSAE AZIRAR  <br> "Encadré par M. Othmane Mekouar" 
     </div>
-</div>
+  </div> 
 
+  <script>
+    // Création des particules
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Taille aléatoire entre 2px et 6px
+      const size = Math.random() * 4 + 2;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      
+      // Position aléatoire
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      
+      // Animation aléatoire
+      particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
+      particle.style.animationDelay = `${Math.random() * 5}s`;
+      
+      particlesContainer.appendChild(particle);
+    }
 
-<div class="trialsection">
-    
-    <div class="rectangle">
-        <div class="trialleft">  
-            <h1>Grow your brand 
-                presence on social media 😍</h1> 
-                <p>Join with more 1200+ happy customers</p>   
-                <div class="downtrial">
-                    <img src="./images/icons/profiles.png" alt="">
-                    <p class="others">and others</p>
-                </div>
-                
-            
-        </div>
-        <div class="tryright">
-            <img src="./images/icons/reseau.png" alt="">
-            <div class="trialnow">
-                <p>Get your trial now</p>
-            </div>
-        </div>
-    </div>
-    
-</div>
-
-<div class="endsection">
-    <div class="elyansection">
-        <div class="ehya">
-            <img src="./images/icons/ehya.png" alt="">
-            <p>Build a modern and creative website with crealand</p>
-            <div class="icons">
-                <img src="./images/icons/G.png" alt="">
-                <img src="./images/icons/twitter.png" alt="">
-                <img src="./images/icons/inst.png" alt="">
-                <img src="./images/icons/linkedin.png" alt="">
-            </div> 
-        </div>
-        <div class="product">
-        <h1>Product</h1>
-        <p>Landingpage</p>
-        <p>Features</p>
-        <p>Documentation</p>
-        <p>Referral Program</p>
-        <p>Pricing</p>
-        </div>
-        <div class="section">
-        <h1>Services</h1>
-        <p>Documentation</p>
-        <p>Design</p>
-        <p>Themes</p>
-        <p>Illustrations</p>
-        <p>UI Kit</p>
-        </div>
-        <div class="company">
-        <h1>Company</h1>
-        <p>About</p>
-        <p>Terms</p>
-        <p>Privacy Policy</p>
-        <p>Careers</p>
-        </div>
-        <div class="more">
-        <h1>More</h1>
-        <p>Documentation</p>
-        <p>License</p>
-        <p>Changelog</p>
-        </div>
-    </div>
-    
-    <div class="heart">
-        <img src="./images/icons/Heart.png" alt="">
-        <h1>Copyright © 2021. Crafted with love.</h1>
-    </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    setTimeout(() => {
+      window.location.href = "figma.html"; 
+    }, 7000);
+  </script>
 </body>
 </html>

@@ -1,31 +1,149 @@
+.fade-up, .fade-right {
+    opacity: 0; 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-up.in-view, .fade-right.in-view {
+    opacity: 1;
+    transform: translateY(0);  
+}
+
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-up {
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.fade-right {
+    animation: fadeRight 1s ease-out forwards;
+}
+
+
+
+
+
+
+
+.login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .login-popup {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    animation: login 0.5s ease;
+    position: relative;
+    text-align: center;
+  }
+  
+  .login-popup input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .login-popup button {
+    padding: 10px 20px;
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close-login {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+
+  @keyframes login {
+    from {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+
+  #toggleLogin:checked ~ .login-container {
+    display: flex;
+  }
+  
+
+
+
+  
+  
+
 html {
     scroll-behavior: smooth;
   }
   
 body{
     margin: 0;
-    
+    padding: 0;
+    overflow-x: hidden;
+
 }
 .topview{
+    background-color: #00A8DB; 
+    width: 100%;
+    HEIGHT: 720px;
+    position: relative;
 
-    
-    background-color: #00A8DB;
-    HEIGHT: 737px;
-    width: 1256px;
 }
 .header{
     justify-content: space-between;
     align-items: center;
     display: flex;
+  
+
     padding-top: 25px;
     padding-left: 7rem;
     padding-right: 7rem;
 }
 
-.header img{
-    width: 90px;
-    height: 28px;
-}
+
 .header img:hover{
     cursor: pointer;
     border: 2px solid;
@@ -91,7 +209,8 @@ body{
 }
 
 .topvi{
-    margin-left: 38.5px;
+   
+    text-align: end;
 }
 .viewp{
     width: 382px;
@@ -175,19 +294,17 @@ body{
     width: 700px;
 }
 .apptop{
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    width: 1109px;
-    height: 38px;
-   
-    padding: 0px 2rem 0rem 6.7rem;
+    display: flex
+        ;
+            justify-content: space-evenly;
+            height: 38px;
+            padding: 7rem 2rem 0rem 9.7rem;
 }
 .apptop img{
     margin: 0;
     padding: 0;
     width: fit-content;
-    border-radius: 10px;
+    
     width: max-content;
 }
 .apptop img:hover{
@@ -331,7 +448,6 @@ body{
 
 .tracksection{
     background-color: #EFFBFF;
-    width: 1256px;
     height: 600px;
     box-sizing: border-box;
 }
@@ -371,14 +487,13 @@ body{
     justify-content: center;
     margin-left: 70px;
     margin-top:40px;
-    width: 1160px;
+    
     height: 337px;
 }
 .cls{
     background-color: #FFFFFF;
-    width: 259px;
-    width: 100%;
-    max-width: 260px;
+    width: 20%;
+    
     height: 300px;
     border-radius: 3%;
 }
@@ -435,7 +550,7 @@ body{
 
 .commentsection{
     background-color:#FFFFFF;
-    width: 100%;
+  
     height: 480px;  
 }
 .commentstitle{
@@ -588,7 +703,7 @@ letter-spacing: 0.3;
 
 .rectangle
 {
-    width: 1049px;
+   
     height: 322px;
     border-radius: 12px;
     margin: 0rem 7rem 0rem 7rem;
@@ -669,19 +784,17 @@ letter-spacing: 0.3;
 
 .endsection{
     background-color: rgba(8, 19, 21, 1);
-    width: 1256px;
+ 
    height: 625px;
    box-sizing: border-box;
 }
 
 .elyansection{
-    width: 828px;
     height: 350px;
-    padding: 7rem 3rem 0rem 8rem;
-    display: flex;
-    gap: 3rem;
-    margin-left: 2rem;
-    background-color: inherit;
+    padding: 7rem 3rem 0rem 9rem;
+    display: flex
+;
+    justify-content: space-around;
 }
 .ehya{
     width: 263px;
@@ -730,297 +843,183 @@ letter-spacing: 0.3;
 }
 
 
-
-@media screen and ( max-width:500px) {
-    .topview{
-        height: 1197px;
-        width: 855px;
+@media screen and (max-width: 500px) {
+    .header, .topviewdown, .donnerdown, .pcsection, .comments {
+      flex-direction: column;
+      padding: 2rem;
     }
-    .topviewleft{
-        display: flex;
-        flex-direction: column;
+    .headimg{
+        margin-top: 2rem;
+        margin-left: -23rem;
+    }
+    .rightview{
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        margin-left: -3rem;
+    }
+    .topview{
+        HEIGHT: 1085px;
+    }
+    .topviewleft h1{
+        margin-top: 0;
+    margin-left: 0;
     }
     .topviewleft img{
-        margin-left: -165px;
+        margin-left: 0;
     }
-    .topvi{
-        margin-left: -102.5px;
-        margin-top: -55rem;
-       
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .topviewleft p{
+        margin-left: 10px;
+    }
+    .textdown {
+        justify-content: start;
+    }
+    .header {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
   
-    .rightview{
-    gap: 33px;
-    margin-top: 6rem;
-    margin-left: -6rem;
+    .rightview {
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .rightview p{
-        font-size: x-large;
+    .cercle{
+        width: 262px;
+    height: 303px;
+    margin-top: -6px;
     }
-    .viewp{
-        width: 512px;
-    height: 80px;
-    font-size: x-large;
-    font-family: "DM Sans", sans-serif;
-    }
-    .header{
-        padding-left: 6rem;
-        padding-right: 11rem;
-        padding-top: 3px;
-    }
-    .header img{
-        width: 19%;
-        
-    }
-    .topviewdown{
-        display: flex;
-        flex-direction: column;
-    }
-    .textfleche{
-        Font-size: 17px;
-    }
-    .topviewleft{
-        margin-left: -33px;
-        margin-top: -70px;
-    }
-    
-    .appsection
-    {
-        height: 1095px;
-        width: 730px;
-        Font-size : 10px
-    }
-    
-    .apptop{
-        margin-top: 100px;
-        display: flex;
-        justify-content: center;
-                width: 838px;
-        height: 38px;
-        padding: 2px 0rem 0rem 1rem;
-        Font-size : 10px
-    }
-    .apptop img{
-        padding: 0;
-        margin: 0;
-        width: 20%;
-        height: 100%;
-        Font-size : 10px
-    }
-   .appleft{
-    margin-top: -2rem;
-   }
-    .mob{
-        margin-top: 8rem;
-        margin-left: 5rem;
-    }
-    .vect{
-        margin-left: 3rem;
-    }
-    .donnerdown{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .appright {
-        margin-top: 3rem;
-        margin-left: 10rem;
-        Font-size : 10px
-    }
-    .appright h1{
-        text-align: center;
-        margin-left: 2rem;
-        width: 522px;
-        font-size: xx-large;
-    }
-   
-    .graphs{
-        text-align: center;
-        Font-size : 17px;
-        width: 588px;
-    }
-    .textf{
-        margin-left: 12rem;
-        Font-size : 18px
+    .topviewright{
+        width: 573px;
+        height: 762px;
+        margin-top: -330px;
+        margin-left: -148px;
     }
 
-    .pcsection{
-        width: 139%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 5rem;
-        margin-top: -5rem;
-        Font-size : 16px
+
+     .pcsectiondroit {
+      margin: 0 auto;
+      text-align: center;
     }
-    .pcsectiongauche{
-        width: 93%;
-    }
-    .pcsectiondroit{
-        width: 88%;
-        height: 384px;
-        margin-top: 5px;
-        margin-left: -46px;
-    }
-    .pctextgauche{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 12rem;
-        width: max-content;
-        padding: 1rem;
-        font-size: 21px;
-    }
-    
-    
-    .pcpsection{
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-        text-align: center;
-        width: 39rem;
-        margin-left: 2rem;
-        
-       font-size: 23px;
+    .appsection{
+        height: 1095px;
     }
     .schedule_title{
-    text-align: center;
-    margin-left: 12rem;
-    width: max-content;
+        text-align: center;
     }
-
-    .pclist
-    {
-    display: flex; 
-   
-        font-size: 21px;
-        margin: -11px;
-        margin-left: 27px;
+    .appright{
+        margin-top: -3rem;
+    }
+    .graphs{
+        text-align: justify;
+      
+        width: 364px;
     }
    
-    .pcsectiondroit img{
-        margin-left: 4rem;
-        width: max-content;
+    .p1{
+        width: 433px;
     }
-
-
-    .tracksection
-    {
-        height: 802px;
-        width: 865px;
+    .tracksection{
+        height: 902px;
     }
     .case{
-        margin-left: 12px;
+        flex-wrap:wrap;
+        justify-content: start;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .cls {
+        width: 47%;
+        height: 252px;
+      }
+      .commentsection{
+        height: 686px;
+      }
+    .commentsicons {
+      position: static;
+      margin-bottom: 2rem;
       
-        margin-top: 23px;
-        width: max-content;
-        height: 281px;
-        gap: 16px;
     }
-    .cls{
-        width: 25%;
-        height: 255px;
-    }
-    .trackimage{
-        width: 25%;
-        height: 48px;
-        margin-top: 16px;
-        margin-left: -109px;
-    }
-    .h1track{
-        width: 84%;
-        font-size: larger;
-        overflow-x: clip;
-        line-height: 20px;
-        margin-left: 13px;
-    }
-    .ptrack{
-        width: 93%;
-        margin-top: 28px;
-        margin-left: 8px;
-    }
-    .commentsection{
-       
-        width: 100%;
-        height: 579px;
+    .rightcomments{
+        width: 365px;
     }
     .commentstitle{
-        
-        text-align: center;
-        width: 525px;
-    }
-    .commentstitle p{
-        font-size: larger;
-    }
-    .commentsreview{
-        margin-left: -1rem;
+        margin-left: 2rem;
     }
     .comments{
-        margin: 6rem 0rem 3rem 10rem;
-        display: flex;
-        flex-direction: column;
-        width: 407px;
-        gap: 4rem;
+        margin: 1rem 1rem 1rem 0rem;
     }
-    .trialsection{
-        height: 520px;
-        width: 865px;
+    .name p {
+        width: 211px;
     }
-    .rectangle{
-        width: 92%;
-        height: 438px;
-    border-radius: 18px;
-    margin: 2rem 7rem 2rem 2rem;
+    .apptop{
+        padding: 6rem 0rem 0rem 0rem;
+        gap: 11px;
+        justify-content: start;
+
+    }
+    .apptop img{
+        width: 87px;
+    }
+    .appleft{
+        text-align: start;
+    }
+    .mob{
+        width: 359px;
+        height: 436px;
+        margin-top: 5rem;
+        margin-left: 0rem;
+    }
+    .vect{
+        margin-top: -29rem;
+        rotate: 351.6deg;
+        height: 527px;
+        width: 477px;
+        margin-left: -1rem;
+    }
+
+    .pcsectiondroit img{
+        width: 422px;
+        margin-right: 16rem;
+        margin-top: 2rem;
+        height: 72%;
+        
+    }
+
+    .rectangle {
+        width: 468px;
+        height: 382px;
+        margin-left: 1rem;
     }
     .trialleft{
-        width: 294px;
-        height: 423px;
-        padding: 2rem 0rem 1rem 2rem;
-    
+        width: 406px;
+    height: 178px;
+    padding: 2rem 0rem 0rem 1rem;
     }
     .trialleft h1{
-        font-weight: 600;
-    size: 36px;
-    line-height: 36px;
-    }
-    .others{
-        width: 70px;
-    }
-    .tryright img{
-        height: 100%;
-        width: 115%;
-        margin-left: -4rem;
-
+        width: 406px;
+        font-size: x-large;
     }
     .trialnow{
-        margin-top: -16rem;
+        margin-top: -7rem;
         margin-left: 7.5rem;
-        padding: 10px;
     }
-    .trialnow p{
-        margin-left: 0.9rem;
-        font-size: larger;
+    .tryright{
+        margin-left: -21rem;
+        margin-top: 1rem;
     }
+    .tryright img {
+      margin-top: 2rem;
+    }
+
+    
 
     .endsection{
-        height: 546px;
-        width: 851px;
-        
-
+        height: 829px;
     }
     .elyansection{
-        padding: 3rem 0rem 0rem 2rem;
-        width: 514px;
+        padding: 3rem 0rem 0rem 0rem;
         height: 58%;
-        gap: 4rem;
-        
+        gap: 1.5rem;
+        flex-wrap: wrap;
 
 
     }
@@ -1043,153 +1042,225 @@ letter-spacing: 0.3;
         margin-top: 6rem;
     }
     .heart{
-        margin-left: 17rem;
-        width: max-content;
-        height: 33.5%;
-        background-color: inherit;
-        margin-top: -1rem;
+        margin-left: 6rem;
+        margin-top: 8rem;
     }
     
     .endsection h1{
         font-size: unset;
     }
-}
 
-@media screen and (min-width: 501px) and (max-width: 1000px)
-{
-     .topview{
-        width: 1291px;
-        HEIGHT: 737px;
-    }
-    .header{
-        padding-top: 49px;
-        width: 1030px;
-        height: 47px;
-    }
-    .headimg{
-        width: 133px;
-    height: 45px;
-    }
-    .flech{
-        gap: 41px;
-    }
-    .flechimg{
-       margin-left: -2rem;
-    }
-    .schedule_title{
-        width: 505px;
-        margin-left: 3rem;
-    }
-    .pcpsection{
-       
-    text-align: center;
-    }
-   
-    .pcsectiondroit{
-        width: max-content;
+  }
 
-    }
-    .pcsectiondroit img{
-        width: max-content;
-        margin-top: 6rem;
-    }
-    .pcpsection{
-        width: 503px;
-        font-size: x-large;
-    }
-    .pctextgauche{
-        font-size: larger;
-    }
-    .schedule_title{
-        width: 414px;
-        margin-left: 7rem;
-    }
-    .pclist{
-        font-size: larger;
-    }
-    .tracksection{
-        width: 1291px;
-        height: 689px;
-    }
+  @media screen and (min-width: 501px) and (max-width: 1000px) {
     
-    .cls{
-        width: 360px;
-        height: 335px;
-    }
-    .h1track{
-        font-size: x-large;
-        text-align: justify;
-        width: 288px;
-        line-height: 32px;
-    }
-    .ptrack{
-        font-size: x-large;
-        width: inherit;
-        text-align: -webkit-left;
-    }
-    .p1{
-        font-size: larger;
-    }
-    .cls p{
-        font-size: x-large;
-    }
-    .trackimage{
-        height: 92px;
-    width: 92px;
-    margin-left: -28px;
-    }
-    .rightview p{
-        font-size: x-large;
-    }
-
-    .endsection{
-        width: 1291px;
-    }
-    .elyansection{
-        padding: 4rem 0rem 0rem 3rem;
-    }
-    .elyansection p{
-        font-size: x-large;
-    }
-    .elyansection h1{
-        font-size: xx-large;
-    }
-    .ehya img {
-        width: 128px;
-    }
-    .icons{
-        margin-top: 7rem;
-    }
-    .heart h1{
-        width: max-content;
-        font-size: x-large;
-    }
-}
-
-@media screen and (min-width: 1001px)
-{
     .topview{
-        width: 1256px;
+        width: 63rem;
+        HEIGHT: 644px;
+        
     }
 
+    .header {
+        padding-right: 6rem;
+        gap: 4rem;
+        display: flex
+;
+        text-align: center;
+        align-items: center;
+    }
+
+    .topviewright{
+        width: 93%;
+        height: 87%;
+    }
+    .topviewleft{
+        margin-left: -6rem;
+        margin-top: -24rem;
+    }
+    .topviewdown{
+        justify-content: space-between;
+        gap: 4rem;
+        align-items: center;
+        padding: 3rem 4rem 0rem 2rem;
+    }
     .topvi{
-        width: 48rem;
-        height: 49rem;
-        margin-left: 14px;
+        text-align: justify;
+        margin-top: 3rem;
+    }
+    .cercle{
+        width: 288px;
+        height: 288px;
+        margin-left: 18px;
+    }
+    .topviewright{
+        width: 526px;
+        height: 666px;
+        margin-top: -20rem;
+    }
+    .apptop{
+        height: 4.7%;
+        padding: 7rem 7rem 0rem 6.7rem;
+        justify-content: space-around;
     }
     .appsection{
-        width: 1256px;
+        padding: 3rem;
     }
-    .tracksection{
-        width: 1256px;
+    .appright h1{
+        font-size: 204%;
+        margin-left: 49%;
+
     }
-    .commentsection{
-        width: 1256px;
+    .appright p{
+        font-size: 93% ;
+        margin-left: 49%;
+
     }
+    .appsection{
+        height: 38rem;
+    }
+
+    .pcsectiondroit img {
+        width: 113%;
+        max-width: 400px;
+        margin:7rem auto;
+        height: 64%;
+    }
+    
+    .case{
+        flex-wrap:wrap;
+        justify-content: start;
+     margin-left: 0px;
+    }
+    .cls {
+       
+        width: 36%;
+        max-width: 400px;
+        height: 96%;
+        margin: auto;
+      }
+    .tracksection {
+        height: 65rem;
+        padding: 2rem 1rem;
+       width: 63rem;
+      }
+      .ptrack{
+        width: 249px;
+        text-align: center;
+      }
+    .appleft , .mob , .vect {
+        height: 64%;
+        width: 324%;
+        margin-left: 1rem;
+    }
+
+
+  
+    .headimg {
+      width: 120px;
+      height: auto;
+    }
+  
+    .flech {
+      gap: 2rem;
+    }
+  
+    .flechimg {
+      margin-left: -1rem;
+    }
+  
+    .schedule_title {
+      width: 90%;
+      margin: 1rem auto;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .pcpsection {
+      width: 90%;
+      margin: 1rem auto;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  
+    .pctextgauche,
+    .pclist {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+  
+    .pcsectiondroit {
+      width: 100%;
+      text-align: center;
+    }
+  
+    
+    .rectangle{
+        margin: 0rem 7rem 0rem 4rem;
+    }
+    
+    .p1,
+    
+    .h1track {
+      font-size: 1.2rem;
+      margin-left: 63px;
+      text-align: left;
+      line-height: 1.6;
+      text-align: -webkit-center;
+    }
+  
+    .trackimage {
+      width: 80px;
+      height: 80px;
+      margin-left: 87px;
+    }
+  
+
+    .comments{
+        margin: 8rem 1rem 1rem 3rem;
+        width: 54rem;
+    }
+
     .trialsection{
-        width: 1256px;
+        width: 63rem;
     }
-    .endsection{
-        width: 1256px;
+    .rightview p {
+      font-size: 1.2rem;
     }
-}
+  
+    .endsection {
+        width: max-content;
+      padding: 2rem 1rem;
+    }
+  
+    .elyansection {
+    
+        width: 57rem;
+      padding: 2rem 1rem;
+    }
+  
+    .elyansection p {
+      font-size: 1.2rem;
+    }
+  
+    .elyansection h1 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  
+    .ehya img {
+      width: 100px;
+      height: auto;
+    }
+  
+    .icons {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .heart{
+        margin-left: 21rem;
+    }
+    .heart h1 {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
